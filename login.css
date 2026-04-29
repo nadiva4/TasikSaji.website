@@ -1,0 +1,455 @@
+/* TASIK SAJI — login.css */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    background: #fff;
+}
+
+/* LAYOUT UTAMA */
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/*LEFT PANEL*/
+.left-panel {
+    position: relative;
+    flex: 1;
+    background: #fff;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+
+/* DAUN DEKORASI  */
+.leaf {
+    position: absolute;
+    pointer-events: none;
+    z-index: 3;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.18));
+}
+
+/* Posisi & ukuran tiap daun */
+.leaf-1 {
+    width: 62px;
+    top: 18px;
+    left: 14px;
+    transform: rotate(-145deg);
+    animation: floatA 5s ease-in-out infinite alternate;
+}
+.leaf-2 {
+    width: 46px;
+    top: 90px;
+    left: 60px;
+    transform: rotate(200deg);
+    animation: floatB 6.5s ease-in-out infinite alternate;
+    opacity: 0.85;
+}
+.leaf-3 {
+    width: 56px;
+    top: 10px;
+    left: 42%;
+    transform: rotate(-60deg);
+    animation: floatA 7s ease-in-out infinite alternate;
+}
+.leaf-4 {
+    width: 50px;
+    top: 50px;
+    right: 28px;
+    transform: rotate(120deg);
+    animation: floatB 5.5s ease-in-out infinite alternate;
+}
+.leaf-5 {
+    width: 42px;
+    top: 145px;
+    left: 10px;
+    transform: rotate(40deg);
+    animation: floatA 4.5s ease-in-out infinite alternate;
+    opacity: 0.80;
+}
+.leaf-6 {
+    width: 44px;
+    top: 155px;
+    right: 16px;
+    transform: rotate(-120deg);
+    animation: floatB 6s ease-in-out infinite alternate;
+    opacity: 0.78;
+}
+
+@keyframes floatA {
+    from { transform: translateY(0px)    rotate(-145deg); }
+    to   { transform: translateY(-10px)  rotate(-135deg); }
+}
+@keyframes floatB {
+    from { transform: translateY(0px)   rotate(200deg); }
+    to   { transform: translateY(-9px)  rotate(210deg); }
+}
+
+
+/* SPRINKLE  */
+.sprinkles-wrap {
+    position: absolute;
+    bottom: 30%;
+    left: 28%;
+    width: 44%;
+    height: 28%;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.sp {
+    position: absolute;
+    border-radius: 50px;
+    opacity: 0.82;
+}
+
+.sp-a {
+    width: 6px; height: 16px;
+    background: #c0392b;
+    top: 10%;  left: 20%;
+    transform: rotate(30deg);
+    border-radius: 4px;
+    animation: spFloat 4s ease-in-out infinite alternate;
+}
+.sp-b {
+    width: 5px; height: 13px;
+    background: #e67e22;
+    top: 5%;   left: 55%;
+    transform: rotate(-20deg);
+    border-radius: 4px;
+    animation: spFloat 5s ease-in-out infinite alternate;
+}
+.sp-c {
+    width: 7px; height: 7px;
+    background: #8B4513;
+    top: 30%;  left: 8%;
+    border-radius: 50%;
+    animation: spFloat 3.5s ease-in-out infinite alternate;
+}
+.sp-d {
+    width: 5px; height: 18px;
+    background: #c0392b;
+    top: 25%;  left: 75%;
+    transform: rotate(50deg);
+    border-radius: 4px;
+    animation: spFloat 6s ease-in-out infinite alternate;
+}
+.sp-e {
+    width: 6px; height: 6px;
+    background: #d35400;
+    top: 60%;  left: 30%;
+    border-radius: 50%;
+    animation: spFloat 4.5s ease-in-out infinite alternate;
+}
+.sp-f {
+    width: 4px; height: 14px;
+    background: #a93226;
+    top: 55%;  left: 85%;
+    transform: rotate(-40deg);
+    border-radius: 4px;
+    animation: spFloat 5.5s ease-in-out infinite alternate;
+}
+.sp-g {
+    width: 8px; height: 8px;
+    background: #cb4335;
+    top: 75%;  left: 15%;
+    border-radius: 50%;
+    animation: spFloat 3.8s ease-in-out infinite alternate;
+    opacity: 0.70;
+}
+.sp-h {
+    width: 5px; height: 12px;
+    background: #e74c3c;
+    top: 80%;  left: 60%;
+    transform: rotate(25deg);
+    border-radius: 4px;
+    animation: spFloat 4.8s ease-in-out infinite alternate;
+}
+
+@keyframes spFloat {
+    from { transform: translateY(0px)  rotate(30deg); }
+    to   { transform: translateY(-7px) rotate(40deg); }
+}
+
+
+/* TEKS KIRI*/
+.left-content {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78%;
+    text-align: center;
+    z-index: 4;
+}
+
+.brand-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a5c1a;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.brand-desc {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #3a7a3a;
+    line-height: 1.8;
+}
+
+
+/* GAMBAR SATE */
+.food-illustration {
+    position: absolute;
+    bottom: 88px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    width: 68%;
+    max-width: 320px;
+    filter: drop-shadow(0 12px 28px rgba(0,0,0,0.22));
+    animation: floatFood 4s ease-in-out infinite alternate;
+}
+
+.food-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes floatFood {
+    from { transform: translateX(-50%) translateY(0px); }
+    to   { transform: translateX(-50%) translateY(-10px); }
+}
+
+
+/* BUKIT HIJAU */
+.green-hill {
+    position: absolute;
+    bottom: -60px;
+    left: -80px;
+    width: 440px;
+    height: 370px;
+    background: #2e7d32;
+    border-radius: 50% 55% 0 0 / 55% 55% 0 0;
+    z-index: 2;
+}
+
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 420px;
+    min-width: 380px;
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;       
+    justify-content: center;   
+    padding: 48px 36px;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* LOGIN BOX */
+.login-box {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 36px 36px;
+ 
+    box-shadow:
+        0 2px 0px  rgba(0,0,0,0.04),   
+        0 6px 16px rgba(0,0,0,0.08),  
+        0 20px 48px rgba(0,0,0,0.12),  
+        inset 0 1px 0 rgba(255,255,255,0.9); 
+ 
+    border: 1px solid rgba(255,255,255,0.85);
+ 
+    transform: translateY(-4px);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+ 
+.login-box:hover {
+    box-shadow:
+        0 2px 0px  rgba(0,0,0,0.04),
+        0 10px 24px rgba(0,0,0,0.10),
+        0 30px 60px rgba(0,0,0,0.15),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+    transform: translateY(-7px);
+}
+ 
+.login-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #1a5c1a;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+/* Form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #2e7d32;
+    letter-spacing: 0.02em;
+}
+
+.form-group input {
+    border: none;
+    border-bottom: 1.5px solid #ccc;
+    padding: 9px 4px;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #333;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #bbb;
+    font-size: 13px;
+}
+
+.form-group input:focus {
+    border-bottom-color: #2e7d32;
+}
+
+/* Lupa kata sandi */
+.forgot-row {
+    margin-bottom: 20px;
+}
+
+.forgot-link {
+    font-size: 11.5px;
+    color: #999;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-link:hover {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+/* Tombol Login */
+.btn-login {
+    width: 100%;
+    background: #3a7d44;
+    color: #ccc;
+    border: 1.5px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    margin-bottom: 14px;
+}
+
+.btn-login:hover {
+    background: #f0f0f0;
+    border-color: #aaa;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #bbb;
+    font-size: 12px;
+    margin-bottom: 14px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e5e5e5;
+}
+
+/* Tombol Google */
+.btn-google {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #fff;
+    color: #333;
+    border: 1.5px solid #ddd;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-bottom: 20px;
+}
+
+.btn-google:hover {
+    background: #f7f7f7;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.09);
+}
+
+.google-icon {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+/* Daftar sini */
+.register-row {
+    text-align: center;
+    font-size: 12.5px;
+    color: #888;
+}
+
+.register-link {
+    color: #2e7d32;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.register-link:hover {
+    color: #1a5c1a;
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .page-wrapper { flex-direction: column; }
+    .left-panel   { min-height: 380px; }
+    .right-panel  { width: 100%; min-width: unset; }
+    .food-illustration { width: 55%; bottom: 70px; }
+    .brand-title  { font-size: 1.5rem; }
+}
